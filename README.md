@@ -15,13 +15,19 @@ This repository contains the Machine Learning component of the RPS-TRON project.
 3. **Pillow (PIL):** Pillow is a fork of the Python Imaging Library (PIL) that adds support for more image file formats. Install it using pip:
 
 ```bash
-pip install Pillow
+pip install pillow
 ```
 
 4. **Matplotlib:** Matplotlib is a plotting library. Install it using pip:
 
 ```bash
 pip install matplotlib
+```
+
+5. **NumPy:** NumPy is a important package for numerical computations in Python. Install it using pip:
+
+```bash
+pip install numpy
 ```
 
 ## Usage
