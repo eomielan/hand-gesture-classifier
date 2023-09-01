@@ -6,31 +6,7 @@ This repository contains an updated version of the Machine Learning component pr
 
 [![Video Demonstration](./assets/youtube_thumbnail.jpg)](https://youtu.be/thhxIV0cgXo?si=FxjFKz3m8_ArCqI6 "RPS-TRON Video Demonstration - Click to Watch!")
 
-## Installation
-
-1. **Python:** Ensure that Python >= 3.8 (with pip) is installed
-
-2. **PyTorch and Torchvision:** Install PyTorch and Torchvision by following the instructions on the official website: [PyTorch Installation Guide](https://pytorch.org/get-started/locally/)
-
-3. **Pillow (PIL):** Pillow is a fork of the Python Imaging Library (PIL) that adds support for more image file formats. Install it using pip:
-
-```bash
-pip install pillow
-```
-
-4. **Matplotlib:** Matplotlib is a plotting library. Install it using pip:
-
-```bash
-pip install matplotlib
-```
-
-5. **NumPy:** NumPy is a important package for numerical computations in Python. Install it using pip:
-
-```bash
-pip install numpy
-```
-
-## Usage
+## Installation & Usage
 
 1. Clone this repository:
 
@@ -38,41 +14,52 @@ pip install numpy
 git clone https://github.com/eomielan/rps-tron-gesture-cnn.git
 ```
 
-2. Install the required dependencies as mentioned in the Installation section.
+2. Ensure that Python >= 3.8 is installed.
 
-3. Training the Model:
+3. Train the Model:
 
-   Choose one of the following methods to train the model:
+   Choose one of the following methods to train the model based on operating system:
 
-   - **Using the Bash Script (`train_model.sh`):**
+   - **Linux and MacOS (`train_model.sh`):**
 
       To train the model using the provided Bash script, follow these steps:
 
       - Open a terminal within the repository.
-      - Navigate to the directory where the script is located.
-      - If needed, the script will automatically install nbconvert using pip.
       - Make the script executable with the command: `chmod +x train_model.sh`
       - Run the script with the command: `./train_model.sh`
 
-      This will initiate the training procedure and generate the necessary output.
+      This will initiate the training procedure and generate an output jupyter notebook.
 
-   - **Using the Jupyter Notebook (`train.ipynb`):**
+   - **Windows (`train_model.ps1`):**
 
-      To train the model using the Jupyter Notebook, follow these steps:
+      To train the model using the provided powershell script, follow these steps:
 
-      - Open the Jupyter Notebook environment in your web browser or in vscode.
-      - Navigate to the `src` folder.
-      - Find and open the `train.ipynb` notebook.
-      - Inside the notebook, select "Run" from the Jupyter toolbar and choose "Run All Cells."
+      - Open a terminal within the repository.
+      - If the script is not already executable, you'll need to adjust the script execution policy to allow running PowerShell scripts. Open PowerShell as an administrator and run the following command to set the execution policy: `Set-ExecutionPolicy RemoteSigned`
+      - Run the script with the command: `.\train_model.ps1`
 
-      This will execute all the cells in the notebook, which includes the training procedure.
+      This will initiate the training procedure and generate an output jupyter notebook.
 
-4. Running the Software:
+4. Use the trained model:
 
-   To use the trained model software, follow these steps:
+   Choose one of the following methods to train the model based on operating system:
 
-   - Open a terminal within the repository.
-   - Navigate to the directory containing the main.py file.
-   - Run the command: `python main.py image_filepath.jpg`
+   - **Linux and MacOS (`predict_gesture.sh`):**
 
-   Replace `image_filepath.jpg` with the complete path to the image file you want to process. The software will use the trained model to classify the provided image as rock, paper, or scissors.
+      To use the pre-trained model using the provided Bash script, follow these steps:
+
+      - Open a terminal within the repository.
+      - Make the script executable with the command: `chmod +x train_model.sh`
+      - Run the script with the command: `./predict_gesture.sh <img_path.jpg>` where `img_path.jpg` is the path to the gesture image.
+
+      This will use the pre-trained model to print a prediction.
+
+   - **Windows (`predict_gesture.ps1`):**
+
+      To use the pre-trained model using the provided powershell script, follow these steps:
+
+      - Open a terminal within the repository.
+      - If the script is not already executable, you'll need to adjust the script execution policy to allow running PowerShell scripts. Open PowerShell as an administrator and run the following command to set the execution policy: `Set-ExecutionPolicy RemoteSigned`
+      - Run the script with the command: `.\predict_gesture.ps1 <img_path.jpg>` where `img_path.jpg` is the path to the gesture image.
+
+      This will use the pre-trained model to print a prediction.
