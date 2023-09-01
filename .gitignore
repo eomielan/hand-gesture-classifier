@@ -1,2 +1,4 @@
 .DS_Store
 rps_model.pth
+myenv/
+train.nbconvert.ipynb

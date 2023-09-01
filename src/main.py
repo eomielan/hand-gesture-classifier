@@ -2,7 +2,7 @@ import sys
 from gesture_model import GestureModel
 
 
-MODEL_PATH = './rps_model.pth'
+MODEL_PATH = 'rps_model.pth'
 
 
 def main():

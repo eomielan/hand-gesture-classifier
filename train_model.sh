@@ -1,9 +1,21 @@
 #!/bin/bash
 
-pip install nbconvert
+set -e
 
-notebook="./src/train.ipynb"
+if [ ! -d "myenv" ]; then
+    python3 -m venv myenv
+fi
 
-jupyter nbconvert --execute --to html "$notebook"
+source myenv/bin/activate
 
-echo "Notebook execution and conversion to HTML completed."
+pip install --no-cache-dir torch torchvision pillow matplotlib numpy jupyter nbconvert
+
+python_path=$(which python)
+
+notebook_path="./src/train.ipynb"
+
+$python_path -m jupyter nbconvert --to notebook --execute "$notebook_path"
+
+echo "Notebook execution and conversion to notebook format completed."
+
+deactivate
