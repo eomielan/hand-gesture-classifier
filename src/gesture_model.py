@@ -19,17 +19,17 @@ class GestureModel(object):
         self.model.eval()
         self.labels = ('rock', 'paper', 'scissors')
 
-    def predict(self, file_path):
+    def predict(self, img_path):
         """
         Predict the class label for an input image using the trained gesture recognition model.
 
         Args:
-            file_path (str): The file path of the input image.
+            img_path (str): The file path of the input image.
 
         Returns:
-            str: The predicted class label for the input image, which can be one of rock, paper, or scissors.
+            str: The predicted class label for the input image, which can be one of rock, paper,
+                or scissors.
         """
-        img_path = file_path
         img = Image.open(img_path).convert('RGB')
         img_tensor = self.transform(img).unsqueeze(0).to(self.device)
 
