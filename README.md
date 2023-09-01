@@ -1,6 +1,6 @@
 # Rock-Paper-Scissors-Tron Hand Gesture CNN
 
-This repository contains an updated version of the Machine Learning component previously used for the RPS-TRON project. It contains a Convolutional Neural Network (CNN) designed to classify hand gestures as either 'rock,' 'paper,' or 'scissors'.
+This repository contains an updated version of the Machine Learning component previously used for the RPS-TRON project. It contains a Convolutional Neural Network (CNN) designed to classify hand gestures into three distinct categories: 'rock,' 'paper,' and 'scissors.'
 
 ## Video Demonstration
 
