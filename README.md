@@ -1,4 +1,4 @@
-# Rock-Paper-Scissors-Tron Hand Gesture CNN
+# Rock-Paper-Scissors Hand Gesture Classifier
 
 This repository contains the machine learning component for a project designed to create a robotic hand that plays rock-paper-scissors. It features a Convolutional Neural Network (CNN) for classifying hand gestures into three categories: 'rock,' 'paper,' and 'scissors'.
 
